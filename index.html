@@ -145,10 +145,10 @@
         let qrCodeInstance = null;
 
         // 초경량 인라인 독립형 로고 소스 (CORS 에러 완벽 방지용 Base64 데이터)
-        const LOGO_IMAGES = {
-            instagram: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTEzMDZjIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIge2xpbmVqb2luPSJyb3VuZCI+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiByeD0iNSIgcnk9IjUiPjwvcmVjdD48cGF0aCBkPSJNMTYgMTEuMzdBNDQgMCAxIDEgMTIuNjMgOCA0IDQgMCAwIDEgMTYgMTEuMzd6Ij48L3BhdGg+PGxpbmUgeDE9IjE3LjUiIHkxPSI2LjUiIHgyPSIxNy41MSIgeTI9IjYuNSI+PC9saW5lPjwvc3ZnPg==",
-            wifi: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMmI2Y2I0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEgOGExNi4zOCAxNi4zOCAwIDAgMSA4LTYgMTYuMzggMTYuMzggMCAwIDEgOCA2Ij48L3BhdGg+PHBhdGggZD0iTTUgMTJhMTAuODkgMTAuODkgMCAwIDEgNy0zIDEwLjg5IDEwLjg5IDAgMCAxIDcgMyI+PC9wYXRoPjxwYXRoIGQ9Ik05IDE2YTYgNiAwIDAgMSA2IDAgNiA2IDAgMCAxIDYgMCI+PC9wYXRoPjxsaW5lIHgxPSIxMiIgeTE9IjIwIiB4Mj0iMTIuMDEiIHkyPSIyMCI+PC9saW5lPjwvc3ZnPg==",
-            store: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTZjNzg0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iOSIgY3k9IjIxIiByPSIxIj48L2NpcmNsZT48Y2lyY2xlIGN4PSIyMCIgY3k9IjIxIiByPSIxIj48L2NpcmNsZT48cGF0aCBkPSJNMSAxaDRsMi42OCAxMy4zOWExIDIgMCAwIDAgMiAuNzhoOS43MmExIDIgMCAwIDAgMi0uNzRMMjMgNkg2Ij48L3BhdGg+PC9zdmc+"
+const LOGO_IMAGES = {
+            instagram: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>`,
+            wifi: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%232b6cb4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.94 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>`,
+            store: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2316a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`
         };
 
         function generateQR() {
